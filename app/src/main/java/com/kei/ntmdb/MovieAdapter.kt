@@ -15,9 +15,9 @@ class MovieAdapter(var context: Context, var listMovie: List<ResultsItem?>?)  : 
     inner class ViewHolder (view: View) : RecyclerView.ViewHolder(view){
         fun bind (movie: ResultsItem){
             with(itemView){
-                tv_title_items.text = movie.originalTitle
-                tv_genre_items.text = movie.genreIds.toString()
+                tv_title_items.text = movie.title
                 tv_synopsis_items.text = movie.overview
+                tv_release_items.text = movie.releaseDate.toString()
                 Glide.with(context).load(movie.posterPath).centerCrop().into(iv_item_movie)
                 itemView.setOnClickListener{
                     itemView.context.startActivity(

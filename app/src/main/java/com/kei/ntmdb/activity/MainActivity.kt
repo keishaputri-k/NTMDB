@@ -60,24 +60,21 @@ class MainActivity : AppCompatActivity(), View.OnClickListener{
                     Log.d("Response", "Success" + response.body()?.results)
                     loading.dismiss()
                     if (response.isSuccessful){
-                        val status = response.body()?.totalResults
-                        if (status != null) {
-                            if (status.equals("ok")){
-                                Toast.makeText(this@MainActivity, "Data Success !", Toast.LENGTH_SHORT).show()
-                                val movieData = response.body()?.results
-                                val movieAdapter = MovieAdapter(this@MainActivity, movieData)
-                                rv_main.adapter = movieAdapter
-                                rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
+                        Log.e("TAG", "onResponse: ${response.body()?.results?.get(0)?.title}" )
+                        Toast.makeText(this@MainActivity, "Data Success !", Toast.LENGTH_SHORT).show()
+                        val movieData = response.body()?.results
+                        val movieAdapter = MovieAdapter(this@MainActivity, movieData)
+                        rv_main.adapter = movieAdapter
+                        rv_main.layoutManager = LinearLayoutManager(this@MainActivity)
 
-                                val dataHighlight = response.body()
-                                Glide.with(this@MainActivity).load(dataHighlight?.results?.component2()?.posterPath).centerCrop().into(iv_highlight)
-                                tv_title_highlight.text = dataHighlight?.results?.component2()?.title
-                                tv_date_highlight.text = dataHighlight?.results?.component2()?.releaseDate
-                            }else{
-                                Toast.makeText(this@MainActivity, "Data Failed !", Toast.LENGTH_SHORT).show()
-                            }
-                        }
+                        val dataHighlight = response.body()
+                        Glide.with(this@MainActivity).load(dataHighlight?.results?.component2()?.posterPath).centerCrop().into(iv_highlight)
+                        tv_title_highlight.text = dataHighlight?.results?.component2()?.title
+                        tv_date_highlight.text = dataHighlight?.results?.component2()?.releaseDate
+                    }else{
+                        Toast.makeText(this@MainActivity, "Data Failed !", Toast.LENGTH_SHORT).show()
                     }
+
                 }
                 override fun onFailure(call: Call<ResponseMovie>, t: Throwable) {
                     Log.d("Response","Failed : " + t.localizedMessage)

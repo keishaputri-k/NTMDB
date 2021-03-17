@@ -5,8 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/background_black"
-    >
+    android:background="@color/background_black">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cv_item_movie"
@@ -47,18 +46,6 @@
         app:layout_constraintTop_toTopOf="@+id/cv_item_movie" />
 
     <TextView
-        android:id="@+id/tv_genre_items"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_20dp"
-        android:text="@string/txt_thriller_mystery"
-        android:textColor="@color/text_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/cv_item_movie"
-        app:layout_constraintTop_toBottomOf="@+id/tv_title_items" />
-
-    <TextView
         android:id="@+id/tv_synopsis_items"
         android:layout_width="@dimen/_263dp"
         android:layout_height="wrap_content"
@@ -71,7 +58,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/cv_item_movie"
-        app:layout_constraintTop_toBottomOf="@+id/tv_genre_items" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_items" />
 
     <TextView
         android:id="@+id/tv_release_items"
