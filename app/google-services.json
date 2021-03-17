@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "766228955032",
+    "project_id": "idn-x-ntmdb",
+    "storage_bucket": "idn-x-ntmdb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:766228955032:android:4dac84196a6090183975ed",
+        "android_client_info": {
+          "package_name": "com.kei.ntmdb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "766228955032-5otbn8p85v4ln3jd5a4k5alugsmots7p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kei.ntmdb",
+            "certificate_hash": "97a025c108b7c9a92d491435533c57786ba2e862"
+          }
+        },
+        {
+          "client_id": "766228955032-90edke1aoh6f2gkbak00sbldcm30ac03.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7YqreP25k45Hoxv2EZfpqkldjvcqEWHs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "766228955032-90edke1aoh6f2gkbak00sbldcm30ac03.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

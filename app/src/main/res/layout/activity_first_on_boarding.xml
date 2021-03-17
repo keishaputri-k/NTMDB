@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_black"
+    tools:context=".activity.FirstOnBoardingActivity">
+
+    <ImageView
+        android:id="@+id/iv_first_ob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/iv_first_onboarding" />
+
+    <TextView
+        android:id="@+id/tv_first_ob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_40dp"
+        android:text="@string/tv_easy_explore"
+        android:fontFamily="@font/poppins_medium"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/_30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_first_ob"/>
+
+    <TextView
+        android:id="@+id/tv_dummy_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text_on_boarding"
+        android:textColor="@color/text_color"
+        android:textAlignment="center"
+        android:layout_marginTop="@dimen/_5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_first_ob" />
+
+    <ImageView
+        android:id="@+id/iv_first_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_30dp"
+        android:src="@drawable/ic_first_page"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_next_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/_30dp"
+        android:text="@string/txt_next"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/_20sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_first_page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_first_page" />
+
+    <TextView
+        android:id="@+id/tv_skip_first"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:text="@string/tv_skip"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/_20sp"
+        android:layout_marginStart="@dimen/_30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_first_page"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iv_first_page" />
+</androidx.constraintlayout.widget.ConstraintLayout>
